@@ -1,0 +1,36 @@
+extends layout
+
+block content
+  .container
+    h1 Search
+
+    // Search form
+    form#search-form(action='/search', method='get')
+      .form-group
+        label(for='search-input') Search
+        input#search-input.form-control(type='text', name='q', value=searchQuery, placeholder='Search...')
+
+      script.
+        const searchInput = document.querySelector('#search-input');
+        searchInput.focus();
+
+    // Search results
+    if error
+      p #{error}
+    else if results && results.length > 0
+      table#results-table.table.table-striped
+        thead
+          tr
+            th Title
+            th Artist
+            th Album
+            th Release Date
+        tbody
+          each song in results
+            tr
+              td= song.title
+              td= song.artist
+              td= song.album
+              td= song.release_date
+    else
+      p No results found.

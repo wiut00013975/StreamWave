@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  .container-fluid
+    .row
+      .col-md-3.sidebar
+        h1 Playlists
+        hr
+        ul.list-unstyled
+          li
+            a(href='/playlists/create') Create Playlist
+          each playlist in playlists
+            li
+              a(href=`/playlists/${playlist.id}`) #{playlist.name}
+              ul
+                li
+                  a(href=`/playlists/${playlist.id}/edit`) Edit
+                li
+                  form(action=`/playlists/${playlist.id}?_method=DELETE`, method='POST')
+                    button.btn.btn-danger(type='button', onclick=`deletePlaylist('${playlist.id}')`) Delete
+
+      .col-md-9.main
+        h1 #{playlist.name}
+        hr
+        p #{playlist.description}
+
+        if playlist.songs.length > 0
+          h2 Songs
+          table.table.table-striped
+            thead
+              tr
+                th(scope='col') Title
+                th(scope='col') Artist
+            tbody
+              each song in playlist.songs
+                tr
+                  td #{song.title}
+                  td #{song.artist}
+        else
+          p This playlist has no songs.

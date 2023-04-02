@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 Create Playlist
+  form(method='POST' action='/playlists')
+    label(for='name') Name
+    input(type='text' name='name' required)
+    label(for='description') Description
+    textarea(name='description' required)
+    button(type='submit') Create

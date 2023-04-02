@@ -1,0 +1,48 @@
+extends layout
+
+block content
+  script.
+    const deleteButtons = document.querySelectorAll('.delete-btn');
+    deleteButtons.forEach(btn => {
+      btn.addEventListener('click', e => {
+        const playlistId = e.target.dataset.id;
+        fetch(`/playlists/${playlistId}?_method=DELETE`, {
+          method: 'DELETE' // update HTTP method to DELETE
+        })
+        .then(res => {
+          // handle response
+        })
+        .catch(err => console.error(err));
+      });
+    });
+
+
+  .container-fluid
+    .row
+      .col-md-3.sidebar
+        h1 Playlists
+        hr
+        ul.list-unstyled
+          li
+            a(href='/playlists/create') Create Playlist
+          each playlist in playlists
+            li
+              a(href=`/playlists/${playlist.id}`) #{playlist.name}
+              ul
+                li
+                  a(href=`/playlists/${playlist.id}/edit`) Edit
+                li
+                  form(action=`/playlists/${playlist.id}`, method='POST')
+                    button.delete-btn.btn.btn-danger(type='button', data-method='DELETE', data-id=playlist.id) Delete
+
+      .col-md-9.main
+        h1 Create Playlist
+        hr
+        form(action='/playlists', method='POST')
+          .form-group
+            label(for='name') Playlist Name
+            input#name.form-control(type='text', name='name', required=true)
+          .form-group
+            label(for='description') Description
+            textarea#description.form-control(name='description')
+          button.btn.btn-primary(type='submit') Create

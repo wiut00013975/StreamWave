@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+  head
+    title StreamWave 
+    link(rel="stylesheet", href="/static/styles.css")
+  body
+    header
+      h1 StreamWave App
+      nav
+        ul
+          li
+            a(href="/") Home
+          li
+            a(href="/search") Search
+          li
+            a(href="/playlists") Create Playlist
+      div.alerts
+        // Error and success messages will be displayed here
+    main
+      block content
+    footer
+      p &copy; 2023 StreamWave App
