@@ -1,0 +1,58 @@
+[
+    {
+        "id": "1",
+        "title": "Flowers",
+        "artist": "Miley Cyrus",
+        "album": "Plastic Hearts",
+        "release_date": "2020-11-27"
+      },
+      {
+        "id": "2",
+        "title": "Diamonds",
+        "artist": "Rihanna",
+        "album": "Unapologetic",
+        "release_date": "2012-09-27"
+      },
+      {
+        "id": "3",
+        "title": "Young and Beautiful",
+        "artist": "Lana Del Rey",
+        "album": "The Great Gatsby: Music from Baz Luhrmann's Film",
+        "release_date": "2013-04-23"
+      },
+      {
+        "id": "4",        
+        "title": "Montero (Call Me By Your Name)",        
+        "artist": "Lil Nas X",        
+        "album": "Montero",        
+        "release_date": "2021-03-26"    
+      },    
+      {        
+        "id": "5",        
+        "title": "drivers license",        
+        "artist": "Olivia Rodrigo",        
+        "album": "N/A",        
+        "release_date": "2021-01-08"    
+      },    
+      {        
+        "id": "6",        
+        "title": "Stay",        
+        "artist": "The Kid LAROI & Justin Bieber",        
+        "album": "Stay - Single",        
+        "release_date": "2021-07-09"    
+      },    
+      {        
+        "id": "7",        
+        "title": "Industry Baby",        
+        "artist": "Lil Nas X ft. Jack Harlow",        
+        "album": "Montero",        
+        "release_date": "2021-07-23"    
+      },    
+      {        
+        "id": "8",        
+        "title": "good 4 u",        
+        "artist": "Olivia Rodrigo",        
+        "album": "SOUR",        
+        "release_date": "2021-05-14"    
+        }
+]

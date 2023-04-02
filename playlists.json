@@ -1,0 +1,24 @@
+
+{
+  "nextId": 4,
+  "list": [
+    {
+      "id": 1,
+      "name": "My Playlist",
+      "description": "This is my playlist",
+      "songs": []
+    },
+    {
+      "id": 2,
+      "name": "Rock Classics",
+      "description": "The best classic rock songs",
+      "songs": []
+    },
+    {
+      "id": 3,
+      "name": "Chill Vibes",
+      "description": "Relax and unwind with these chill tunes",
+      "songs": []
+    }
+  ]
+}

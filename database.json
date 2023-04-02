@@ -1,0 +1,26 @@
+{
+  "nextId": 4,
+  "songs":[
+    {
+        "id": "1",
+        "title": "Flowers",
+        "artist": "Miley Cyrus",
+        "album": "Plastic Hearts",
+        "release_date": "2020-11-27"
+      },
+      {
+        "id": "2",
+        "title": "Diamonds",
+        "artist": "Rihanna",
+        "album": "Unapologetic",
+        "release_date": "2012-09-27"
+      },
+      {
+        "id": "3",
+        "title": "Young and Beautiful",
+        "artist": "Lana Del Rey",
+        "album": "The Great Gatsby: Music from Baz Luhrmann's Film",
+        "release_date": "2013-04-23"
+      }
+]
+}
